@@ -16,7 +16,7 @@ func main() {
 		Handler: router,
 	}
 
-	log.Printf("HTTP2 jrpc-orm Server started on %s", os.Getenv("ADDR"))
+	log.Printf("HTTP2 Server started on %s", os.Getenv("ADDR"))
 
 	err := httpServer.ListenAndServeTLS(
 		os.Getenv("TLS_PEM"), os.Getenv("TLS_KEY"))
