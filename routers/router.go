@@ -14,7 +14,7 @@ func NewRouter() *gin.Engine {
 	//router.Use(middlewares.SentryReportor())
 	router.Use(middlewares.Cors(os.Getenv("CORS_DOMAIN")))
 
-	v1 := router.Group("/jrpc-orm/api/v1")
+	v1 := router.Group("/api/v1")
 	{
 		v1.POST("/ping", api.Ping)
 	}
