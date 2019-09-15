@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+  dogego-mini:
+    image: dogego-mini
+    restart: always
+    environment:
+      - ADDR=:3000
+      - TLS_PEM=./certs/cert.pem
+      - TLS_KEY=./certs/cert.key
+      - SENTRY_DSN=
+      - CORS_DOMAIN=*
+      - GIN_MODE=debug
+    ports:
+      - 3000:80
