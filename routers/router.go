@@ -11,7 +11,7 @@ import (
 func NewRouter() *gin.Engine {
 	router := gin.Default()
 
-	router.Use(middlewares.SentryReportor())
+	//router.Use(middlewares.SentryReportor())
 	router.Use(middlewares.Cors(os.Getenv("CORS_DOMAIN")))
 
 	v1 := router.Group("/jrpc-orm/api/v1")

@@ -1,5 +1,5 @@
 package modules
 
 func InitAllModules() {
-	InitSentryClient()
+	//InitSentryClient()
 }
